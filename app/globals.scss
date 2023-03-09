@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    user-select: none;
+}
+
+.gradient {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 5%, rgb(0, 0, 0)100%);
+}
+
+.gradient-banner {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.99) 5%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.gradient-banner2 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 30%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+
+.nav-links{
+    color: white !important;
+}
+
+.nav-links:hover{
+    color: rgb(235, 180, 0) !important;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.fade-in-left-to-right {
+    opacity: 0;
+    animation-name: fade-in-left-to-right;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in{
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fade-in{
+    0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+}
+  
+@keyframes fade-in-left-to-right {
+    0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.fade-in-right-to-left {
+    opacity: 0;
+    animation-name:fade-in-right-to-left;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.fade-and-scale-in{
+    opacity: 0;
+    scale: 0;
+    animation-name:fade-and-scale-in;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-and-scale-in{
+    0% {
+        opacity: 0;
+        scale: 0;
+        }
+        100% {
+        opacity: 1;
+        scale: 1;
+        }
+}
+
+
+@keyframes fade-in-right-to-left {
+    0% {
+    opacity: 0;
+    transform: translateX(100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+
+
+@keyframes fade-in-bottom-to-top {
+    0% {
+    opacity: 0;
+    transform: translateY(100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-top-to-bottom {
+    0% {
+    opacity: 0;
+    transform: translateY(-100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width:640px)
+{
+    .fade-in-top-to-bottom {
+        opacity: 0;
+        animation-name:fade-in-top-to-bottom;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media only screen and (min-width:1280px)
+{
+    .fade-in-bottom-to-top {
+        opacity: 0;
+        animation-name:fade-in-bottom-to-top;
+        animation-duration: 1s;
+        animation-delay: 0.2s;
+        animation-fill-mode: forwards;
+    }
+    
+}
+
+.glass-effect {
+    background-color: rgba(95, 67, 6, 0.2); /* Set the background color to a semi-transparent white */
+    backdrop-filter: blur(5px) contrast(0.9); /* Apply the backdrop filter to create the glass effect */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow for depth */
+}
